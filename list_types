@@ -1,0 +1,22 @@
+List<String> fruits = ['apple', 'banana', 'cherry'];
+List<int> numbers = List<int>.filled(5, 0); // Creates a list of 5 zeros
+List<int> numbers1 = List.from([1, 2, 3]);
+var firstFruit = fruits[0]; // Access the first element (apple)
+var secondFruit = fruits[1]; // Access the second element (banana)
+fruits.add('date'); // Add an element to the end of the list
+fruits.insert(1, 'blueberry'); // Insert an element at a specific index
+fruits.remove('cherry'); // Remove an element by value
+fruits.removeAt(0); // Remove an element by index
+fruits[0] = 'apricot'; // Update an element by index
+for (var fruit in fruits) {
+  print(fruit);
+}
+
+fruits.forEach((fruit) {
+  print(fruit);
+});
+var numberOfFruits = fruits.length;
+if (fruits.isEmpty) {
+  print('The list is empty.');
+}
+fruits.sort();

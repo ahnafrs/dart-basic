@@ -1,0 +1,25 @@
+class MyClass {
+  // ...
+}
+
+abstract class AbstractClass {
+  // Abstract method
+  void someMethod();
+}
+
+mixin MyMixin {
+  // ...
+}
+const myConstant = const MyConstantClass();
+
+class MyClass {
+  factory MyClass() {
+    // ...
+  }
+}
+class MyClass {
+  late int myVariable;
+}
+external class ExternalClass {
+  external void someMethod();
+}
