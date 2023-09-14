@@ -1,39 +1,32 @@
-// Define an interface called 'Shape'
-abstract class Shape {
-  double calculateArea();
-}
-
-// Define a class called 'Circle' that implements 'Shape'
-class Circle implements Shape {
-  double radius;
-
-  Circle(this.radius);
-
-  @override
-  double calculateArea() {
-    return 3.14 * radius * radius;
+// Define an interface called Animal
+class Animal {
+  void makeSound() {
+    // TODO: implement makeSound
   }
 }
 
-// Define a class called 'Rectangle' that also implements 'Shape'
-class Rectangle implements Shape {
-  double width;
-  double height;
-
-  Rectangle(this.width, this.height);
-
+// Define a class called Dog that implements the Animal interface
+class Dog implements Animal {
   @override
-  double calculateArea() {
-    return width * height;
+  void makeSound() {
+    print('Dog barks');
+  }
+}
+
+// Define a class called Cat that also implements the Animal interface
+class Cat implements Animal {
+  @override
+  void makeSound() {
+    print('Cat meows');
   }
 }
 
 void main() {
-  // Create objects of 'Circle' and 'Rectangle'
-  var circle = Circle(5.0);
-  var rectangle = Rectangle(4.0, 6.0);
+  // Create instances of Dog and Cat
+  var dog = Dog();
+  var cat = Cat();
 
-  // Calculate and print areas
-  print('Circle Area: ${circle.calculateArea()}');
-  print('Rectangle Area: ${rectangle.calculateArea()}');
+  // Call the makeSound method on both objects
+  dog.makeSound(); // Output: Dog barks
+  cat.makeSound(); // Output: Cat meows
 }
